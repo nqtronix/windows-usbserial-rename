@@ -32,10 +32,10 @@ echo device specific pop-up whenever you connect or disconnect the device.
 echo:
 echo:
 echo This script is set up to modify the device with the ID:
-echo   %USB_DEVICE_VID%%AMPERSAND%%USB_DEVICE_PID%
+echo   "%USB_DEVICE_VID%%AMPERSAND%%USB_DEVICE_PID%"
 echo:
 echo The new name of the device will be:
-echo   %USB_DEVICE_NAME% (COMxx)
+echo   "%USB_DEVICE_NAME% (COMxx)"
 echo:
 echo You can find detailed information for your device here:
 echo   %APP_WEB%
@@ -52,7 +52,7 @@ echo from the website pid.codes. To change the VID/PID or the device name please
 echo edit the first section of this script with any text editor. If desired, you
 echo may hide this notice by changing the 5th line to "set APP_IS_DEVELOPER=false"
 echo:
-echo Version: 1.0.0 (see semver.org)
+echo Version: 1.0.1 (see semver.org)
 echo Source:  https://github.com/nqtronix/windows-usbserial-rename
 echo Tested on Windows 10 version 1709 build 16299.547
 echo:
