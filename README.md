@@ -4,14 +4,13 @@
 Exchanging generic data between a micro controller and a computer is often done with a USB CDC serial interface. Whenever Windows detects a new USB serial device, it installs a generic driver automatically. Unfortunately the assigned name is also generic, making it harder to find in various programs. While it is possible to write custom drivers with custom device names, it is complicated to install them without a valid signature.
 
 ## Description:
-This repro contains a single batch file (.bat) to rename any USB serial device based on the settings at the start of the file. It will automatically detect any number of devices with given VID/PID combination and update their display names. The COM port number will be appended as " (COMxx)", where xx is the detected number for the specific device. 
+This repro contains a single batch file (.bat) to rename any USB serial device based on the settings at the start of the file. It will automatically detect any number of devices with given VID/PID combination and update their display names. The COM port number will be appended as ` (COMxx)`, where xx is the detected number for the specific device. 
 
 ## Usage:
 ### Standard:
 If you've received a variant of this file from a 3rd party it is likely that all required options have been set up for you. Just run the file as Administrator and confirm the operation with `yes` when asked. If an error occurs follow the on screen instructions.
 
 ### Developer:
-The device ID, the new name and a few more options can be specified at the start of the batch file. Simply open the file with any text editor and change the variables in the `USER VARIABLES` section; batch specific programming is not required. Once you've confirmed correct operation for your device, you can set `APP_IS_DEVELOPER` to `false` and include it in your distribution. You **do not** need to include a separate license file, as a copy is embedded into the batch file, which can be displayed at runtime.
 The device ID, the new name and a few more options can be specified at the start of the batch file. Simply open the file with any text editor and change the variables in the `USER VARIABLES` section; batch specific programming is not required. Once you've confirmed correct operation for your device, you can set `APP_IS_DEVELOPER` to `false` and include it in your distribution. You **DO NOT** need to include a separate license file, as a copy is embedded into the batch file, which can be displayed at runtime.
 
 ## Useful Third Party Tools/ Services:
